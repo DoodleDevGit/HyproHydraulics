@@ -155,6 +155,7 @@
         </p>
       </div>
     </section>
+    <!-- Flickity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
     <script>
       // Initialize Flickity
@@ -164,8 +165,9 @@
         contain: true,
         pageDots: true,
         autoPlay: 3000, // Auto-slide every 3 seconds
-        wrapAround: true, // Infinite scrolling
+        wrapAround: false, // Infinite scrolling
         lazyLoad: true, // Optimized for loading images
+        initialIndex: 1, // Start with the second slide for visual effect
       });
     </script>
   </body>
