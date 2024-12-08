@@ -1,0 +1,265 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0D0D0D;
+    color: #F9F9F9;
+    font-family: 'Figtree', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 170px;
+    padding: 0px 32px 0px 32px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    color: #ACC5DA;
+}
+
+section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0D0D0D;
+    padding: 20px 20px;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #F9F9F9;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    height: 100vh;
+    gap: 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.hero-logo img {
+    width: 100%;
+    max-width: 517px;
+    height: auto;
+    position: relative;
+}
+
+h1.hero-text {
+    font-size: 22px;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    font-weight: 300;
+}
+
+/* Services Section */
+.services {
+    height: 68vh;
+    display: grid;
+    grid-template-rows: auto 2fr;
+    align-items: start;
+    justify-content: normal;
+    background-image: url('../assets/images/servicesBackground.png');
+    background-repeat: no-repeat;
+    /* Prevent the SVG from repeating */
+    background-size: contain;
+    /* Ensure the SVG scales proportionally */
+    background-position: center;
+    /* Center the SVG within the div */
+}
+
+.services .section-heading {
+    width: 100%;
+}
+
+.services .section-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #333;
+    padding: 32px;
+    border-radius: 4px;
+    height: 220px;
+    width: 200px;
+    max-width: 416px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    text-align: left;
+    background-color: rgba(46, 71, 92, 0.7);
+    white-space: normal;
+    /* Allow text to wrap naturally */
+    word-wrap: break-word;
+    /* Ensures long words wrap */
+    overflow-wrap: break-word;
+    /* Compatibility for modern browsers */
+}
+
+.service-item:hover {
+    background: #444;
+    /* Slight hover effect */
+}
+
+/* About Us Section */
+.about {
+    gap: 50px;
+}
+
+.about p {
+    text-align: center;
+}
+
+.about .section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industry-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.industry-item {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    align-items: center;
+}
+
+.industry-item img {
+    height: 80px;
+    width: 80px;
+}
+
+/* Carousel */
+.carousel {
+    width: 90%;
+    /* Make it responsive */
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Ensures images don't spill out */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Cell */
+.carousel-cell {
+    width: 100%;
+    /* Each slide takes full width */
+    height: 400px;
+    /* Set a fixed height */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Images inside the carousel */
+.carousel-cell img {
+    width: 100%;
+    /* Ensure the image scales properly */
+    height: 100%;
+    /* Maintain height consistency */
+    object-fit: cover;
+    /* Crop image to fit cell without distortion */
+    border-radius: 8px;
+}
+
+
+.process ol {
+    list-style-position: inside;
+}
+
+.contact {
+    padding: 40px 20px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.footer {
+    background: #0D0D0D;
+    text-align: center;
+    padding: 20px 0;
+}
