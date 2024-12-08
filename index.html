@@ -13,9 +13,8 @@
     <script defer src="./scripts/mainScript.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -94,30 +93,9 @@
           </li>
         </ul>
         <div class="carousel">
-          <div class="carousel-cell">
-            <img
-              src="https://via.placeholder.com/1200x400/007BFF/FFFFFF?text=Slide+1"
-              alt="Slide 1"
-            />
-          </div>
-          <div class="carousel-cell">
-            <img
-              src="https://via.placeholder.com/1200x400/FF5733/FFFFFF?text=Slide+2"
-              alt="Slide 2"
-            />
-          </div>
-          <div class="carousel-cell">
-            <img
-              src="https://via.placeholder.com/1200x400/33FF57/FFFFFF?text=Slide+3"
-              alt="Slide 3"
-            />
-          </div>
-          <div class="carousel-cell">
-            <img
-              src="https://via.placeholder.com/1200x400/FED766/FFFFFF?text=Slide+4"
-              alt="Slide 4"
-            />
-          </div>
+          <div class="carousel-cell">Slide 1</div>
+          <div class="carousel-cell">Slide 2</div>
+          <div class="carousel-cell">Slide 3</div>
         </div>
       </div>
     </section>
@@ -158,16 +136,12 @@
     <!-- Flickity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
     <script>
-      // Initialize Flickity
       const elem = document.querySelector(".carousel");
       const flkty = new Flickity(elem, {
         cellAlign: "center",
         contain: true,
         pageDots: true,
-        autoPlay: 3000, // Auto-slide every 3 seconds
-        wrapAround: false, // Infinite scrolling
-        lazyLoad: true, // Optimized for loading images
-        initialIndex: 1, // Start with the second slide for visual effect
+        wrapAround: true,
       });
     </script>
   </body>

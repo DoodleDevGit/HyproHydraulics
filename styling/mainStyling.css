@@ -211,44 +211,22 @@ h1.hero-text {
 
 /* Carousel */
 .carousel {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: visible;
-    /* Allow side slides to show */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Carousel Cell */
-.carousel-cell {
     width: 80%;
-    /* Adjust width for visible side slides */
     height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0.85);
-    /* Make side slides smaller */
-    transition: transform 0.3s ease;
-    /* Smooth scaling transition */
+    margin: auto;
+    background: #ddd;
 }
 
-/* Active Cell Styling */
-.carousel-cell.is-selected {
-    transform: scale(1);
-    /* Scale the active slide to full size */
-    z-index: 2;
-    /* Bring the active slide forward */
-}
-
-/* Images inside the carousel */
-.carousel-cell img {
-    width: 100%;
+.carousel-cell {
+    width: 70%;
     height: 100%;
-    object-fit: cover;
+    margin-right: 10px;
+    background: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
     border-radius: 8px;
 }
 
