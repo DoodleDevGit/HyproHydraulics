@@ -199,7 +199,7 @@
               </div>
               <div class="contact-info">
                 <img src="./assets/vectors/phone.svg" alt="Number" />
-                <p>053 298 2887</p>
+                <p><a href="tel:0813952013">053 298 2887</a></p>
               </div>
               <div class="contact-info">
                 <img src="./assets/vectors/email.svg" alt="Email" />
@@ -302,8 +302,11 @@
       const flkty = new Flickity(elem, {
         cellAlign: "center",
         contain: true,
-        pageDots: true,
+        pageDots: false,
         wrapAround: true,
+        autoPlay: 4000,
+        friction: 0.5,
+        initialIndex: 10,
       });
     </script>
 

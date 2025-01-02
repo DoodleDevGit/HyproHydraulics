@@ -216,15 +216,16 @@ h1.hero-text {
 
 /* Carousel */
 .carousel {
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: fit-content;
     margin: auto;
     background: transparent;
 }
 
 .carousel-cell {
-    width: 70%;
-    height: 100%;
+    top: 40%;
+    width: 400px;
+    height: 205px;
     margin-right: 10px;
     background: transparent;
     display: flex;
@@ -233,9 +234,10 @@ h1.hero-text {
     font-size: 24px;
     color: white;
     border-radius: 8px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: height 1s ease, top 1s ease;
 }
 
 .cell-one {
@@ -292,6 +294,41 @@ h1.hero-text {
 
 .carousel-cell img {
     width: 100%;
+}
+
+.carousel .is-selected {
+    top: 0px;
+    height: 350px;
+}
+
+.carousel .flickity-viewport {
+    height: 416px !important;
+}
+
+.carousel .flickity-slider {
+    height: 100%;
+}
+
+.carousel .flickity-button {
+    top: 40%;
+    background: transparent;
+    color: #F9F9F9;
+}
+
+.carousel .flickity-button .flickity-button-icon {
+    width: 84%;
+    height: 84%;
+    border: none;
+}
+
+.carousel .flickity-button:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.carousel .flickity-button::focus {
+    outline: 0;
+    box-shadow: 0px !important;
 }
 
 .flickity-page-dots {
@@ -447,6 +484,10 @@ h1.hero-text {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.contact .contact-info a {
+    text-decoration: underline;
 }
 
 .whatsapp-container a {
