@@ -21,7 +21,9 @@
     <header class="header">
       <nav class="navbar">
         <div class="logo">
-          <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
+          <a href="#hero">
+            <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
+          </a>
         </div>
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -30,109 +32,269 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-logo">
-        <img src="./assets/logo/heroLogo.svg" alt="Logo" />
-      </div>
-      <h1 class="hero-text">
-        Empowering your success with cutting-edge Hydraulic Solutions built for
-        <br />
-        scalability, efficiency, and growth.
-      </h1>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-      <div class="section-heading">
-        <h2>What We Offer</h2>
-      </div>
-
-      <div class="section-content">
-        <ul class="service-items">
-          <li class="service-item">Hydraulic Repairs</li>
-          <li class="service-item">Hydraulic Components</li>
-          <li class="service-item">Hydraulic Supplies</li>
-          <li class="service-item">Hydraulic Rebuilding</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- About Us -->
-    <section id="about" class="about">
-      <div class="section-heading">
-        <h2>About us</h2>
-        <h3>Our Team strives for Hydraulic excellence</h3>
-        <p>
-          We are a family-owned business for 26 years with experience in
-          everything hydraulic. We offer hydraulic repairs, maintenance, and
-          services.
-        </p>
-      </div>
-      <div class="section-content">
-        <h3>Industries</h3>
-        <ul class="industry-items">
-          <li class="industry-item">
-            <img src="./assets/vectors/construction.svg" alt="Construction" />
-            <p>Construction</p>
-          </li>
-          <li class="industry-item">
-            <img src="./assets/vectors/agriculture.svg" alt="Agriculture" />
-            <p>Agriculture</p>
-          </li>
-          <li class="industry-item">
-            <img
-              src="./assets/vectors/transportation.svg"
-              alt="Transportation"
-            />
-            <p>Transportation</p>
-          </li>
-          <li class="industry-item">
-            <img src="./assets/vectors/mining.svg" alt="Mining" />
-            <p>Mining</p>
-          </li>
-        </ul>
-        <div class="carousel">
-          <div class="carousel-cell">Slide 1</div>
-          <div class="carousel-cell">Slide 2</div>
-          <div class="carousel-cell">Slide 3</div>
+    <div class="content">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="hero-logo">
+          <img src="./assets/logo/heroLogo.svg" alt="Logo" />
         </div>
-      </div>
-    </section>
+        <h1 class="hero-text">
+          Empowering your success with cutting-edge Hydraulic Solutions built
+          for
+          <br />
+          scalability, efficiency, and growth.
+        </h1>
+      </section>
 
-    <!-- Process -->
-    <section id="process" class="process">
-      <h2>Our Process</h2>
-      <ol>
-        <li>Step 1: Lorem ipsum dolor sit amet.</li>
-        <li>Step 2: Sed do eiusmod tempor incididunt.</li>
-        <li>Step 3: Ut enim ad minim veniam.</li>
-        <li>Step 4: Duis aute irure dolor in reprehenderit.</li>
-      </ol>
-    </section>
+      <!-- Services -->
+      <section id="services" class="services section">
+        <div class="section-heading">
+          <h2>What We Offer</h2>
+        </div>
 
-    <!-- Contact Us -->
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="number" placeholder="Your Phone Number" />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div class="contact-details">
-        <p>Phone: 053 298 2887</p>
-        <p>Address: 3582 Backhouse RD, Douglas, Northern Cape, 8730</p>
-        <p>Email: <a href="mailto:INFO@HYPRO.CO.ZA">INFO@HYPRO.CO.ZA</a></p>
-        <p>
-          WhatsApp:
-          <a href="https://wa.me/1234567890" target="_blank"
-            >Send us a message</a
-          >
-        </p>
+        <div class="section-content">
+          <ul class="service-items">
+            <li class="service-item">Hydraulic Repairs</li>
+            <li class="service-item">Hydraulic Components</li>
+            <li class="service-item">Hydraulic Supplies</li>
+            <li class="service-item">Hydraulic Rebuilding</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section id="about" class="about section">
+        <div class="section-heading">
+          <h2>About us</h2>
+          <h3>Our Team strives for Hydraulic excellence</h3>
+          <p>
+            We are a family-owned business for 26 years with experience in
+            everything hydraulic. We offer hydraulic repairs, maintenance, and
+            services.
+          </p>
+        </div>
+        <div class="section-content">
+          <h3>Industries</h3>
+          <ul class="industry-items">
+            <li class="industry-item">
+              <img src="./assets/vectors/construction.svg" alt="Construction" />
+              <p>Construction</p>
+            </li>
+            <li class="industry-item">
+              <img src="./assets/vectors/agriculture.svg" alt="Agriculture" />
+              <p>Agriculture</p>
+            </li>
+            <li class="industry-item">
+              <img
+                src="./assets/vectors/transportation.svg"
+                alt="Transportation"
+              />
+              <p>Transportation</p>
+            </li>
+            <li class="industry-item">
+              <img src="./assets/vectors/mining.svg" alt="Mining" />
+              <p>Mining</p>
+            </li>
+          </ul>
+          <div class="carousel" data-flickity='{ "initialIndex": 2 }'>
+            <div class="carousel-cell cell-one"></div>
+            <div class="carousel-cell cell-two"></div>
+            <div class="carousel-cell cell-three"></div>
+            <div class="carousel-cell cell-four"></div>
+            <div class="carousel-cell cell-five"></div>
+            <div class="carousel-cell cell-six"></div>
+            <div class="carousel-cell cell-seven"></div>
+            <div class="carousel-cell cell-eight"></div>
+            <div class="carousel-cell cell-nine"></div>
+            <div class="carousel-cell cell-ten"></div>
+            <div class="carousel-cell cell-eleven"></div>
+            <div class="carousel-cell cell-twelve"></div>
+            <div class="carousel-cell cell-thirteen"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" class="process section">
+        <div class="section-heading"><h2>Our Process</h2></div>
+        <div class="section-content">
+          <ul class="process-list-container">
+            <li>
+              <span class="half-border-top-left"></span>
+              <div class="process-details">
+                <span class="process-number">1</span>
+                <span class="process-label">Consultation and Assessment</span>
+                <p class="process-description">
+                  Collaborative discussions, gathering crucial information for
+                  custom hydraulic solutions.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="full-border-top"></span>
+              <div class="process-details process-list-item-inverted">
+                <span class="process-number">2</span>
+                <span class="process-label"
+                  >Precision Design and Engineering</span
+                >
+                <p class="process-description">
+                  Experts design tailored solutions with precision, efficiency,
+                  and seamless integration.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="full-border-top"></span>
+              <div class="process-details">
+                <span class="process-number">3</span>
+                <span class="process-label"
+                  >Installation and Implementation</span
+                >
+                <p class="process-description">
+                  Skilled technicians execute flawless installation, ensuring
+                  seamless integration and operational excellence.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="full-border-top"></span>
+              <div class="process-details process-list-item-inverted">
+                <span class="process-number">4</span>
+                <span class="process-label">Support and Maintenance</span>
+                <p class="process-description">
+                  Proactive maintenance, responsive support for longevity and
+                  optimal hydraulic system performance.
+                </p>
+              </div>
+              <span class="half-border-bottom-right"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact Us -->
+      <section id="contact" class="contact section">
+        <div class="section-heading">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="section-content">
+          <div class="left-contact-section">
+            <h3>Feel free to reach out to us</h3>
+
+            <div class="contact-details">
+              <div class="contact-info">
+                <img src="./assets/vectors/location.svg" alt="Address" />
+                <p>
+                  3582 Backhouse RD<br />Douglas<br />Northern Cape<br />8730
+                </p>
+              </div>
+              <div class="contact-info">
+                <img src="./assets/vectors/clock.svg" alt="Times" />
+                <p>
+                  Mon - Thurs: 08:00am - 05:00pm<br />
+                  Fri: 08:00am - 04:00pm<br />
+                  Sat - Sun: Closed<br />
+                  Public Holidays: Closed
+                </p>
+              </div>
+              <div class="contact-info">
+                <img src="./assets/vectors/phone.svg" alt="Number" />
+                <p>053 298 2887</p>
+              </div>
+              <div class="contact-info">
+                <img src="./assets/vectors/email.svg" alt="Email" />
+                <p>
+                  Email:
+                  <a href="mailto:doodledev@outlook.com">INFO@HYPRO.CO.ZA</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="whatsapp-container">
+              <a href="https://wa.me/0813952013" target="_blank">
+                <p>
+                  Or send us a message<br />
+                  directly via WhatsApp
+                </p>
+                <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
+              /></a>
+            </div>
+          </div>
+          <div class="right-contact-section">
+            <h3>Get in touch</h3>
+            <form id="contact-form" class="contact">
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <label for="name">Name</label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  placeholder="Number"
+                />
+                <label for="number">Number</label>
+              </div>
+              <div class="input-container">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  required
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-logo">
+        <a href="#hero">
+          <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
+        </a>
       </div>
-    </section>
+      <div class="footer-social-links">
+        <img src="./assets/vectors/fbLogo.svg" alt="Facebook" />
+        <img src="./assets/vectors/liLogo.svg" alt="LinkedIn" />
+      </div>
+      <div class="footer-copy">
+        <h1>
+          Copyright © 2024 DoodleDev<br />
+          All Rights Reserved
+        </h1>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Use requestAnimationFrame to ensure the scroll reset happens after rendering
+        requestAnimationFrame(function () {
+          window.scrollTo(0, 0); // Scroll to top-left corner
+        });
+      });
+    </script>
+
     <!-- Flickity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
     <script>
@@ -143,6 +305,61 @@
         pageDots: true,
         wrapAround: true,
       });
+    </script>
+
+    <!-- Load the EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        (function () {
+          emailjs.init({
+            publicKey: "j40Q4apzRCqxeJtXQ",
+          });
+        })();
+
+        // Check if the EmailJS SDK loaded correctly
+        if (typeof emailjs !== "undefined") {
+          // Handle form submission
+          document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent form from submitting normally
+
+              const submitButton = event.target.querySelector(
+                'button[type="submit"]'
+              );
+              submitButton.textContent = "Sending..."; // Temporary feedback to user
+
+              // Collect form data
+              const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                number: event.target.number.value,
+                message: event.target.message.value,
+              };
+
+              // Send email using EmailJS
+              emailjs.send("Tgmailservice", "template_yi8aegh", formData).then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                  submitButton.textContent = "Sent Successfully!";
+                  submitButton.disabled = true; // Disable button after submission
+                },
+                function (error) {
+                  console.error("FAILED...", error);
+                  submitButton.textContent = "Failed to Send. Try Again.";
+                  submitButton.disabled = false; // Re-enable button after failure
+                }
+              );
+            });
+        } else {
+          console.error("EmailJS SDK failed to load.");
+        }
+      };
     </script>
   </body>
 </html>
