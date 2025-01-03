@@ -11,10 +11,9 @@
     />
     <link rel="stylesheet" href="./styling/mainStyling.css" />
     <script defer src="./scripts/mainScript.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css"
-    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -96,20 +95,102 @@
               <p>Mining</p>
             </li>
           </ul>
-          <div class="carousel" data-flickity='{ "initialIndex": 2 }'>
-            <div class="carousel-cell cell-one"></div>
-            <div class="carousel-cell cell-two"></div>
-            <div class="carousel-cell cell-three"></div>
-            <div class="carousel-cell cell-four"></div>
-            <div class="carousel-cell cell-five"></div>
-            <div class="carousel-cell cell-six"></div>
-            <div class="carousel-cell cell-seven"></div>
-            <div class="carousel-cell cell-eight"></div>
-            <div class="carousel-cell cell-nine"></div>
-            <div class="carousel-cell cell-ten"></div>
-            <div class="carousel-cell cell-eleven"></div>
-            <div class="carousel-cell cell-twelve"></div>
-            <div class="carousel-cell cell-thirteen"></div>
+          <!-- Slider main container -->
+
+          <div class="carousel">
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image1.jpeg"
+                alt="Image1"
+                title="Image1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image2.jpeg"
+                alt="Image2"
+                title="Image2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image3.jpeg"
+                alt="Image3"
+                title="Image3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image4.jpeg"
+                alt="Image4"
+                title="Image4"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image5.jpeg"
+                alt="Image5"
+                title="Image5"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image6.jpeg"
+                alt="Image6"
+                title="Image6"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image7.jpeg"
+                alt="Image7"
+                title="Image7"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image8.jpeg"
+                alt="Image8"
+                title="Image8"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image9.jpeg"
+                alt="Image9"
+                title="Image9"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image10.jpeg"
+                alt="Image10"
+                title="Image10"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image11.jpeg"
+                alt="Image11"
+                title="Image11"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image12.jpeg"
+                alt="Image12"
+                title="Image12"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/carousel/Image13.jpeg"
+                alt="Image13"
+                title="Image13"
+              />
+            </div>
+            <a id="prev" class="control prev"></a>
+            <a id="next" class="control next"></a>
           </div>
         </div>
       </section>
@@ -292,21 +373,6 @@
         requestAnimationFrame(function () {
           window.scrollTo(0, 0); // Scroll to top-left corner
         });
-      });
-    </script>
-
-    <!-- Flickity JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
-    <script>
-      const elem = document.querySelector(".carousel");
-      const flkty = new Flickity(elem, {
-        cellAlign: "center",
-        contain: true,
-        pageDots: false,
-        wrapAround: true,
-        autoPlay: 4000,
-        friction: 0.5,
-        initialIndex: 10,
       });
     </script>
 

@@ -3,9 +3,9 @@ document.querySelectorAll(".navbar a").forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const target = document.querySelector(this.getAttribute("href"));
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY; // Calculate the position of the target
-    const offsetPosition = targetPosition - 100; // Adjust for the offset (95px down)
+    var target = document.querySelector(this.getAttribute("href"));
+    var targetPosition = target.getBoundingClientRect().top + window.scrollY; // Calculate the position of the target
+    var offsetPosition = targetPosition - 100; // Adjust for the offset (95px down)
 
     window.scrollTo({
       top: offsetPosition,
@@ -15,9 +15,9 @@ document.querySelectorAll(".navbar a").forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".section");
+  var sections = document.querySelectorAll(".section");
 
-  const observer = new IntersectionObserver(
+  var observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -30,4 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   sections.forEach((section) => observer.observe(section));
+
+  var elems = document.querySelectorAll(".carousel");
+  M.Carousel.init(elems, {
+    indicators: true,
+    numVisible: 3,
+    fullWidth: false,
+  });
+
+  //carousel Next function
+  document.getElementById("next").addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent interference with drag
+    var el = document.querySelector(".carousel");
+    var l = M.Carousel.getInstance(el);
+    l.next(1);
+  });
+
+  //carousel previous function
+  document.getElementById("prev").addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent interference with drag
+    var el = document.querySelector(".carousel");
+    var l = M.Carousel.getInstance(el);
+    l.prev(1);
+  });
 });
