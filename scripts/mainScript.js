@@ -38,6 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
     fullWidth: false,
   });
 
+  elems.forEach(function (carousel) {
+    // Prevent interaction that changes the slide
+    carousel.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    carousel.addEventListener("mousedown", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    carousel.addEventListener("mouseup", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    carousel.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    carousel.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
   //carousel Next function
   document.getElementById("next").addEventListener("click", (e) => {
     e.stopPropagation(); // Prevent interference with drag

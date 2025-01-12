@@ -1,4 +1,8 @@
 /* General Reset */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -230,6 +234,7 @@ h1.hero-text {
     cursor: grab;
     width: 400px;
     transition: top 0.5s ease;
+
 }
 
 .carousel .carousel-item:active {
@@ -238,6 +243,18 @@ h1.hero-text {
 
 .carousel .carousel-item img {
     width: 100%;
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%
 }
 
 .carousel {
@@ -312,6 +329,7 @@ h1.hero-text {
     right: 0;
     bottom: 0;
     margin: 0;
+    display: none;
 }
 
 .carousel .indicators .indicator-item {
@@ -331,8 +349,7 @@ h1.hero-text {
     background-color: #fff;
 }
 
-.carousel.scrolling .carousel-item .materialboxed,
-.carousel .carousel-item:not(.active) .materialboxed {
+.carousel .carousel-item {
     pointer-events: none;
 }
 
@@ -423,7 +440,40 @@ h1.hero-text {
 }
 
 .process-list-container li {
-    padding: 0px 40px 0px 40px;
+    min-height: 117px;
+    transition: transform .2s;
+    transform: scale(1);
+    /* Animation */
+}
+
+.process-list-container li:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+.process-list-container .left {
+    display: inline-block;
+    position: relative;
+    background-image: url('../assets/vectors/point-left.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left center;
+    justify-items: start;
+    padding: 0px 0px 0px 60px;
+
+}
+
+.process-list-container .right {
+    background-image: url('../assets/vectors/point-right.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 98% center;
+    /* Shift slightly left to ensure the tip is visible */
+    display: grid;
+    justify-items: end;
+    padding: 0px 65px 0px 0px;
+    /* Adjust padding to give more space on the right */
 }
 
 .process-list-container .process-details {
@@ -480,29 +530,36 @@ h1.hero-text {
     align-items: center;
 }
 
-.half-border-top-left {
+.border-top-left-short {
     content: '';
-    width: 50%;
+    width: 20%;
     height: 5px;
     background-color: #172A3A;
     display: block;
 }
 
-.half-border-bottom-right {
+.border-bottom-left-long {
     content: '';
-    width: 50%;
+    width: 55%;
     height: 5px;
     background-color: #172A3A;
     display: block;
-    transform: translateX(100%);
 }
 
-.full-border-top {
+.border-bottom-right-long {
     content: '';
-    width: 100%;
+    width: 55%;
     height: 5px;
     background-color: #172A3A;
     display: block;
+}
+
+.border-top-right-short {
+    content: '';
+    height: 5px;
+    background-color: #172A3A;
+    display: block;
+    width: 35%;
 }
 
 

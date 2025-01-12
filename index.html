@@ -14,6 +14,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -96,98 +97,99 @@
             </li>
           </ul>
           <!-- Slider main container -->
-
-          <div class="carousel">
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image1.jpeg"
-                alt="Image1"
-                title="Image1"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image2.jpeg"
-                alt="Image2"
-                title="Image2"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image3.jpeg"
-                alt="Image3"
-                title="Image3"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image4.jpeg"
-                alt="Image4"
-                title="Image4"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image5.jpeg"
-                alt="Image5"
-                title="Image5"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image6.jpeg"
-                alt="Image6"
-                title="Image6"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image7.jpeg"
-                alt="Image7"
-                title="Image7"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image8.jpeg"
-                alt="Image8"
-                title="Image8"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image9.jpeg"
-                alt="Image9"
-                title="Image9"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image10.jpeg"
-                alt="Image10"
-                title="Image10"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image11.jpeg"
-                alt="Image11"
-                title="Image11"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image12.jpeg"
-                alt="Image12"
-                title="Image12"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/images/carousel/Image13.jpeg"
-                alt="Image13"
-                title="Image13"
-              />
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image1.jpeg"
+                  alt="Image1"
+                  title="Image1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image2.jpeg"
+                  alt="Image2"
+                  title="Image2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image3.jpeg"
+                  alt="Image3"
+                  title="Image3"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image4.jpeg"
+                  alt="Image4"
+                  title="Image4"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image5.jpeg"
+                  alt="Image5"
+                  title="Image5"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image6.jpeg"
+                  alt="Image6"
+                  title="Image6"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image7.jpeg"
+                  alt="Image7"
+                  title="Image7"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image8.jpeg"
+                  alt="Image8"
+                  title="Image8"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image9.jpeg"
+                  alt="Image9"
+                  title="Image9"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image10.jpeg"
+                  alt="Image10"
+                  title="Image10"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image11.jpeg"
+                  alt="Image11"
+                  title="Image11"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image12.jpeg"
+                  alt="Image12"
+                  title="Image12"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/carousel/Image13.jpeg"
+                  alt="Image13"
+                  title="Image13"
+                />
+              </div>
             </div>
             <a id="prev" class="control prev"></a>
             <a id="next" class="control next"></a>
@@ -200,8 +202,7 @@
         <div class="section-heading"><h2>Our Process</h2></div>
         <div class="section-content">
           <ul class="process-list-container">
-            <li>
-              <span class="half-border-top-left"></span>
+            <li class="left">
               <div class="process-details">
                 <span class="process-number">1</span>
                 <span class="process-label">Consultation and Assessment</span>
@@ -211,8 +212,7 @@
                 </p>
               </div>
             </li>
-            <li>
-              <span class="full-border-top"></span>
+            <li class="right">
               <div class="process-details process-list-item-inverted">
                 <span class="process-number">2</span>
                 <span class="process-label"
@@ -224,8 +224,7 @@
                 </p>
               </div>
             </li>
-            <li>
-              <span class="full-border-top"></span>
+            <li class="left">
               <div class="process-details">
                 <span class="process-number">3</span>
                 <span class="process-label"
@@ -237,8 +236,7 @@
                 </p>
               </div>
             </li>
-            <li>
-              <span class="full-border-top"></span>
+            <li class="right">
               <div class="process-details process-list-item-inverted">
                 <span class="process-number">4</span>
                 <span class="process-label">Support and Maintenance</span>
@@ -247,7 +245,6 @@
                   optimal hydraulic system performance.
                 </p>
               </div>
-              <span class="half-border-bottom-right"></span>
             </li>
           </ul>
         </div>
