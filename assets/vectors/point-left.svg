@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 80 20" style="background: #0D0D0D">
+  <!-- Left part of the arrow (the '<' symbol) -->
+  <polyline points="10,0 0,10 10,20" fill="#0D0D0D" stroke="#172A3A" stroke-width="1"/>
+  <!-- Horizontal lines extending from the tips -->
+  <line x1="10" y1="0" x2="80" y2="0" stroke="#172A3A" stroke-width="1.5"/>
+  <line x1="10" y1="20" x2="50" y2="20" stroke="#172A3A" stroke-width="1.5"/>
+</svg>
