@@ -106,6 +106,7 @@
 
     #process .section-content .process-list-container li {
         background-image: none;
+        padding: 0px;
     }
 
     .contact .section-content .left-contact-section h3 {
@@ -171,8 +172,9 @@
         width: 90%;
     }
 
-    .carousel .indicators {
+    #about .carousel .indicators {
         display: block;
+        bottom: 0px;
     }
 
     .about .section-heading {
