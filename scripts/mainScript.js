@@ -15,6 +15,55 @@ document.querySelectorAll(".navbar a").forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  requestAnimationFrame(function () {
+    window.scrollTo(0, 0); // Scroll to top-left corner
+  });
+
+  (function () {
+    emailjs.init({
+      publicKey: "j40Q4apzRCqxeJtXQ",
+    });
+  })();
+
+  // Check if the EmailJS SDK loaded correctly
+  if (typeof emailjs !== "undefined") {
+    // Handle form submission
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        const submitButton = event.target.querySelector(
+          'button[type="submit"]'
+        );
+        submitButton.textContent = "Sending..."; // Temporary feedback to user
+
+        // Collect form data
+        const formData = {
+          name: event.target.name.value,
+          email: event.target.email.value,
+          number: event.target.number.value,
+          message: event.target.message.value,
+        };
+
+        // Send email using EmailJS
+        emailjs.send("Tgmailservice", "template_yi8aegh", formData).then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            submitButton.textContent = "Sent Successfully!";
+            submitButton.disabled = true; // Disable button after submission
+          },
+          function (error) {
+            console.error("FAILED...", error);
+            submitButton.textContent = "Failed to Send. Try Again.";
+            submitButton.disabled = false; // Re-enable button after failure
+          }
+        );
+      });
+  } else {
+    console.error("EmailJS SDK failed to load.");
+  }
+
   var sections = document.querySelectorAll(".section");
 
   var observer = new IntersectionObserver(
@@ -30,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   sections.forEach((section) => observer.observe(section));
+
   var burgerMenu = document.querySelector(".burger-menu");
   var navLinks = document.querySelector(".nav-links");
 
@@ -58,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fullWidth: false,
   });
 
+  var startY = 0;
+  var startX = 0;
+
   elems.forEach(function (carousel) {
     // Prevent interaction that changes the slide
     carousel.addEventListener("click", function (e) {
@@ -66,8 +119,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     carousel.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
+      startY = e.touches[0].clientY;
+      startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchmove", function (e) {
+      const moveY = e.touches[0].clientY - startY;
+      const moveX = e.touches[0].clientX - startX;
+
+      // Check if the movement is mostly vertical
+      if (Math.abs(moveY) > Math.abs(moveX)) {
+        // Allow vertical scrolling
+        e.stopPropagation();
+      } else {
+        // Prevent default behavior for horizontal swipes
+        e.preventDefault();
+      }
     });
 
     carousel.addEventListener("touchend", function (e) {

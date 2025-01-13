@@ -68,9 +68,13 @@
     }
 
     .section {
-        margin-bottom: 0px;
+        margin-bottom: 20px;
         height: fit-content;
-        min-height: 100vh;
+    }
+
+    .hero {
+        text-align: center;
+        height: 100vh;
     }
 
     .right-contact-section {
@@ -90,10 +94,6 @@
         max-width: 137px;
         font-size: 16px;
         padding: 12px;
-    }
-
-    section#about {
-        height: fit-content;
     }
 
     .industry-items {

@@ -19,414 +19,359 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
-    <!-- Navigation -->
-    <header class="header">
-      <nav class="navbar">
-        <div class="logo">
+    <div id="view">
+      <!-- Navigation -->
+      <header class="header">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#hero">
+              <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
+            </a>
+          </div>
+          <button class="burger-menu" aria-label="Toggle navigation">☰</button>
+          <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
+
+      <div class="content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+          <div class="hero-logo">
+            <img src="./assets/logo/heroLogo.svg" alt="Logo" />
+          </div>
+          <h1 class="hero-text">
+            Empowering your success with cutting-edge Hydraulic Solutions built
+            for
+            <br />
+            scalability, efficiency, and growth.
+          </h1>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services section">
+          <div class="section-heading">
+            <h2>What We Offer</h2>
+          </div>
+
+          <div class="section-content">
+            <ul class="service-items">
+              <li class="service-item">Hydraulic Repairs</li>
+              <li class="service-item">Hydraulic Components</li>
+              <li class="service-item">Hydraulic Supplies</li>
+              <li class="service-item">Hydraulic Rebuilding</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="about section">
+          <div class="section-heading">
+            <h2>About us</h2>
+            <h3>Our Team strives for Hydraulic excellence</h3>
+            <p>
+              We are a family-owned business for 26 years with experience in
+              everything hydraulic. We offer hydraulic repairs, maintenance, and
+              services.
+            </p>
+          </div>
+          <div class="section-content">
+            <h3>Industries</h3>
+            <ul class="industry-items">
+              <li class="industry-item">
+                <img
+                  src="./assets/vectors/construction.svg"
+                  alt="Construction"
+                />
+                <p>Construction</p>
+              </li>
+              <li class="industry-item">
+                <img src="./assets/vectors/agriculture.svg" alt="Agriculture" />
+                <p>Agriculture</p>
+              </li>
+              <li class="industry-item">
+                <img
+                  src="./assets/vectors/transportation.svg"
+                  alt="Transportation"
+                />
+                <p>Transportation</p>
+              </li>
+              <li class="industry-item">
+                <img src="./assets/vectors/mining.svg" alt="Mining" />
+                <p>Mining</p>
+              </li>
+            </ul>
+            <!-- Slider main container -->
+            <div class="carousel-container">
+              <div class="carousel">
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image1.jpeg"
+                    alt="Image1"
+                    title="Image1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image2.jpeg"
+                    alt="Image2"
+                    title="Image2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image3.jpeg"
+                    alt="Image3"
+                    title="Image3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image4.jpeg"
+                    alt="Image4"
+                    title="Image4"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image5.jpeg"
+                    alt="Image5"
+                    title="Image5"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image6.jpeg"
+                    alt="Image6"
+                    title="Image6"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image7.jpeg"
+                    alt="Image7"
+                    title="Image7"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image8.jpeg"
+                    alt="Image8"
+                    title="Image8"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image9.jpeg"
+                    alt="Image9"
+                    title="Image9"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image10.jpeg"
+                    alt="Image10"
+                    title="Image10"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image11.jpeg"
+                    alt="Image11"
+                    title="Image11"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image12.jpeg"
+                    alt="Image12"
+                    title="Image12"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/images/carousel/Image13.jpeg"
+                    alt="Image13"
+                    title="Image13"
+                  />
+                </div>
+              </div>
+              <a id="prev" class="control prev"></a>
+              <a id="next" class="control next"></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="process section">
+          <div class="section-heading"><h2>Our Process</h2></div>
+          <div class="section-content">
+            <ul class="process-list-container">
+              <li class="left">
+                <div class="process-details">
+                  <span class="process-number">1</span>
+                  <span class="process-label">Consultation and Assessment</span>
+                  <p class="process-description">
+                    Collaborative discussions, gathering crucial information for
+                    custom hydraulic solutions.
+                  </p>
+                </div>
+              </li>
+              <li class="right">
+                <div class="process-details process-list-item-inverted">
+                  <span class="process-number">2</span>
+                  <span class="process-label"
+                    >Precision Design and Engineering</span
+                  >
+                  <p class="process-description">
+                    Experts design tailored solutions with precision,
+                    efficiency, and seamless integration.
+                  </p>
+                </div>
+              </li>
+              <li class="left">
+                <div class="process-details">
+                  <span class="process-number">3</span>
+                  <span class="process-label"
+                    >Installation and Implementation</span
+                  >
+                  <p class="process-description">
+                    Skilled technicians execute flawless installation, ensuring
+                    seamless integration and operational excellence.
+                  </p>
+                </div>
+              </li>
+              <li class="right">
+                <div class="process-details process-list-item-inverted">
+                  <span class="process-number">4</span>
+                  <span class="process-label">Support and Maintenance</span>
+                  <p class="process-description">
+                    Proactive maintenance, responsive support for longevity and
+                    optimal hydraulic system performance.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" class="contact section">
+          <div class="section-heading">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="section-content">
+            <div class="left-contact-section">
+              <h3>Feel free to reach out to us</h3>
+
+              <div class="contact-details">
+                <div class="contact-info">
+                  <img src="./assets/vectors/location.svg" alt="Address" />
+                  <p>
+                    3582 Backhouse RD<br />Douglas<br />Northern Cape<br />8730
+                  </p>
+                </div>
+                <div class="contact-info">
+                  <img src="./assets/vectors/clock.svg" alt="Times" />
+                  <p>
+                    Mon - Thurs: 08:00am - 05:00pm<br />
+                    Fri: 08:00am - 04:00pm<br />
+                    Sat - Sun: Closed<br />
+                    Public Holidays: Closed
+                  </p>
+                </div>
+                <div class="contact-info">
+                  <img src="./assets/vectors/phone.svg" alt="Number" />
+                  <p><a href="tel:0813952013">053 298 2887</a></p>
+                </div>
+                <div class="contact-info">
+                  <img src="./assets/vectors/email.svg" alt="Email" />
+                  <p>
+                    Email:
+                    <a href="mailto:doodledev@outlook.com">INFO@HYPRO.CO.ZA</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="whatsapp-container">
+                <a href="https://wa.me/0813952013" target="_blank">
+                  <p>
+                    Or send us a message<br />
+                    directly via WhatsApp
+                  </p>
+                  <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
+                /></a>
+              </div>
+            </div>
+            <div class="right-contact-section">
+              <h3>Get in touch</h3>
+              <form id="contact-form" class="contact">
+                <div class="input-container">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                  <label for="name">Name</label>
+                </div>
+                <div class="input-container">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                  <input
+                    type="tel"
+                    id="number"
+                    name="number"
+                    placeholder="Number"
+                  />
+                  <label for="number">Number</label>
+                </div>
+                <div class="input-container">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div class="footer-logo">
           <a href="#hero">
             <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
           </a>
         </div>
-        <button class="burger-menu" aria-label="Toggle navigation">☰</button>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+        <div class="footer-social-links">
+          <img src="./assets/vectors/fbLogo.svg" alt="Facebook" />
+          <img src="./assets/vectors/liLogo.svg" alt="LinkedIn" />
         </div>
-      </nav>
-    </header>
-
-    <div class="content">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section">
-        <div class="hero-logo">
-          <img src="./assets/logo/heroLogo.svg" alt="Logo" />
+        <div class="footer-copy">
+          <h1>
+            Copyright © 2024 DoodleDev<br />
+            All Rights Reserved
+          </h1>
         </div>
-        <h1 class="hero-text">
-          Empowering your success with cutting-edge Hydraulic Solutions built
-          for
-          <br />
-          scalability, efficiency, and growth.
-        </h1>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="services section">
-        <div class="section-heading">
-          <h2>What We Offer</h2>
-        </div>
-
-        <div class="section-content">
-          <ul class="service-items">
-            <li class="service-item">Hydraulic Repairs</li>
-            <li class="service-item">Hydraulic Components</li>
-            <li class="service-item">Hydraulic Supplies</li>
-            <li class="service-item">Hydraulic Rebuilding</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- About Us -->
-      <section id="about" class="about section">
-        <div class="section-heading">
-          <h2>About us</h2>
-          <h3>Our Team strives for Hydraulic excellence</h3>
-          <p>
-            We are a family-owned business for 26 years with experience in
-            everything hydraulic. We offer hydraulic repairs, maintenance, and
-            services.
-          </p>
-        </div>
-        <div class="section-content">
-          <h3>Industries</h3>
-          <ul class="industry-items">
-            <li class="industry-item">
-              <img src="./assets/vectors/construction.svg" alt="Construction" />
-              <p>Construction</p>
-            </li>
-            <li class="industry-item">
-              <img src="./assets/vectors/agriculture.svg" alt="Agriculture" />
-              <p>Agriculture</p>
-            </li>
-            <li class="industry-item">
-              <img
-                src="./assets/vectors/transportation.svg"
-                alt="Transportation"
-              />
-              <p>Transportation</p>
-            </li>
-            <li class="industry-item">
-              <img src="./assets/vectors/mining.svg" alt="Mining" />
-              <p>Mining</p>
-            </li>
-          </ul>
-          <!-- Slider main container -->
-          <div class="carousel-container">
-            <div class="carousel">
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image1.jpeg"
-                  alt="Image1"
-                  title="Image1"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image2.jpeg"
-                  alt="Image2"
-                  title="Image2"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image3.jpeg"
-                  alt="Image3"
-                  title="Image3"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image4.jpeg"
-                  alt="Image4"
-                  title="Image4"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image5.jpeg"
-                  alt="Image5"
-                  title="Image5"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image6.jpeg"
-                  alt="Image6"
-                  title="Image6"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image7.jpeg"
-                  alt="Image7"
-                  title="Image7"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image8.jpeg"
-                  alt="Image8"
-                  title="Image8"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image9.jpeg"
-                  alt="Image9"
-                  title="Image9"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image10.jpeg"
-                  alt="Image10"
-                  title="Image10"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image11.jpeg"
-                  alt="Image11"
-                  title="Image11"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image12.jpeg"
-                  alt="Image12"
-                  title="Image12"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/carousel/Image13.jpeg"
-                  alt="Image13"
-                  title="Image13"
-                />
-              </div>
-            </div>
-            <a id="prev" class="control prev"></a>
-            <a id="next" class="control next"></a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section id="process" class="process section">
-        <div class="section-heading"><h2>Our Process</h2></div>
-        <div class="section-content">
-          <ul class="process-list-container">
-            <li class="left">
-              <div class="process-details">
-                <span class="process-number">1</span>
-                <span class="process-label">Consultation and Assessment</span>
-                <p class="process-description">
-                  Collaborative discussions, gathering crucial information for
-                  custom hydraulic solutions.
-                </p>
-              </div>
-            </li>
-            <li class="right">
-              <div class="process-details process-list-item-inverted">
-                <span class="process-number">2</span>
-                <span class="process-label"
-                  >Precision Design and Engineering</span
-                >
-                <p class="process-description">
-                  Experts design tailored solutions with precision, efficiency,
-                  and seamless integration.
-                </p>
-              </div>
-            </li>
-            <li class="left">
-              <div class="process-details">
-                <span class="process-number">3</span>
-                <span class="process-label"
-                  >Installation and Implementation</span
-                >
-                <p class="process-description">
-                  Skilled technicians execute flawless installation, ensuring
-                  seamless integration and operational excellence.
-                </p>
-              </div>
-            </li>
-            <li class="right">
-              <div class="process-details process-list-item-inverted">
-                <span class="process-number">4</span>
-                <span class="process-label">Support and Maintenance</span>
-                <p class="process-description">
-                  Proactive maintenance, responsive support for longevity and
-                  optimal hydraulic system performance.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Contact Us -->
-      <section id="contact" class="contact section">
-        <div class="section-heading">
-          <h2>Contact Us</h2>
-        </div>
-        <div class="section-content">
-          <div class="left-contact-section">
-            <h3>Feel free to reach out to us</h3>
-
-            <div class="contact-details">
-              <div class="contact-info">
-                <img src="./assets/vectors/location.svg" alt="Address" />
-                <p>
-                  3582 Backhouse RD<br />Douglas<br />Northern Cape<br />8730
-                </p>
-              </div>
-              <div class="contact-info">
-                <img src="./assets/vectors/clock.svg" alt="Times" />
-                <p>
-                  Mon - Thurs: 08:00am - 05:00pm<br />
-                  Fri: 08:00am - 04:00pm<br />
-                  Sat - Sun: Closed<br />
-                  Public Holidays: Closed
-                </p>
-              </div>
-              <div class="contact-info">
-                <img src="./assets/vectors/phone.svg" alt="Number" />
-                <p><a href="tel:0813952013">053 298 2887</a></p>
-              </div>
-              <div class="contact-info">
-                <img src="./assets/vectors/email.svg" alt="Email" />
-                <p>
-                  Email:
-                  <a href="mailto:doodledev@outlook.com">INFO@HYPRO.CO.ZA</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="whatsapp-container">
-              <a href="https://wa.me/0813952013" target="_blank">
-                <p>
-                  Or send us a message<br />
-                  directly via WhatsApp
-                </p>
-                <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
-              /></a>
-            </div>
-          </div>
-          <div class="right-contact-section">
-            <h3>Get in touch</h3>
-            <form id="contact-form" class="contact">
-              <div class="input-container">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
-                <label for="name">Name</label>
-              </div>
-              <div class="input-container">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-                <label for="email">Email</label>
-              </div>
-              <div class="input-container">
-                <input
-                  type="tel"
-                  id="number"
-                  name="number"
-                  placeholder="Number"
-                />
-                <label for="number">Number</label>
-              </div>
-              <div class="input-container">
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Message"
-                  required
-                ></textarea>
-                <label for="message">Message</label>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      </section>
+      </footer>
     </div>
-
-    <footer>
-      <div class="footer-logo">
-        <a href="#hero">
-          <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
-        </a>
-      </div>
-      <div class="footer-social-links">
-        <img src="./assets/vectors/fbLogo.svg" alt="Facebook" />
-        <img src="./assets/vectors/liLogo.svg" alt="LinkedIn" />
-      </div>
-      <div class="footer-copy">
-        <h1>
-          Copyright © 2024 DoodleDev<br />
-          All Rights Reserved
-        </h1>
-      </div>
-    </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Use requestAnimationFrame to ensure the scroll reset happens after rendering
-        requestAnimationFrame(function () {
-          window.scrollTo(0, 0); // Scroll to top-left corner
-        });
-      });
-    </script>
-
-    <!-- Load the EmailJS SDK -->
-
-    <script type="text/javascript">
-      window.onload = function () {
-        (function () {
-          emailjs.init({
-            publicKey: "j40Q4apzRCqxeJtXQ",
-          });
-        })();
-
-        // Check if the EmailJS SDK loaded correctly
-        if (typeof emailjs !== "undefined") {
-          // Handle form submission
-          document
-            .getElementById("contact-form")
-            .addEventListener("submit", function (event) {
-              event.preventDefault(); // Prevent form from submitting normally
-
-              const submitButton = event.target.querySelector(
-                'button[type="submit"]'
-              );
-              submitButton.textContent = "Sending..."; // Temporary feedback to user
-
-              // Collect form data
-              const formData = {
-                name: event.target.name.value,
-                email: event.target.email.value,
-                number: event.target.number.value,
-                message: event.target.message.value,
-              };
-
-              // Send email using EmailJS
-              emailjs.send("Tgmailservice", "template_yi8aegh", formData).then(
-                function (response) {
-                  console.log("SUCCESS!", response.status, response.text);
-                  submitButton.textContent = "Sent Successfully!";
-                  submitButton.disabled = true; // Disable button after submission
-                },
-                function (error) {
-                  console.error("FAILED...", error);
-                  submitButton.textContent = "Failed to Send. Try Again.";
-                  submitButton.disabled = false; // Re-enable button after failure
-                }
-              );
-            });
-        } else {
-          console.error("EmailJS SDK failed to load.");
-        }
-      };
-    </script>
   </body>
 </html>
