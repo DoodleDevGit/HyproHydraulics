@@ -243,6 +243,7 @@ h1.hero-text {
 
 .carousel .carousel-item img {
     width: 100%;
+    user-select: none;
 }
 
 .carousel-container {
@@ -330,12 +331,13 @@ h1.hero-text {
     bottom: 0;
     margin: 0;
     display: none;
+    pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .carousel .indicators .indicator-item {
     display: inline-block;
     position: relative;
-    cursor: pointer;
     height: 8px;
     width: 8px;
     margin: 24px 4px;
@@ -343,6 +345,8 @@ h1.hero-text {
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     border-radius: 50%;
+    pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .carousel .indicators .indicator-item.active {
@@ -361,16 +365,17 @@ h1.hero-text {
     /* For Safari */
     -ms-user-select: none;
     /* For IE/Edge */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .carousel-item img {
     pointer-events: none;
-    /* Disable interactions */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .control {
     position: absolute;
-    top: 34%;
+    top: 35%;
     width: 50px;
     height: 50px;
     border-radius: 50px;
