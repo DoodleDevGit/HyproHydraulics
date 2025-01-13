@@ -178,4 +178,22 @@ document.addEventListener("DOMContentLoaded", () => {
     var l = M.Carousel.getInstance(el);
     l.prev(1);
   });
+
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  serviceItems.forEach((item) => {
+    const label = item.querySelector(".service-label");
+
+    label.addEventListener("click", () => {
+      // Close all other dropdowns
+      serviceItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("open");
+        }
+      });
+
+      // Toggle the clicked dropdown
+      item.classList.toggle("open");
+    });
+  });
 });

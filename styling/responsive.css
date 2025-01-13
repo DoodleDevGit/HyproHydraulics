@@ -7,6 +7,7 @@
     font-size: 30px;
     cursor: pointer;
     color: #ACC5DA;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -59,25 +60,6 @@
         max-height: 500px;
         /* Adjust this based on menu content height */
     }
-
-    .services {
-        background-image: none;
-    }
-
-    .services .section-content {
-        background-image: url('../assets/images/servicesBackground.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        align-items: center;
-    }
-
-    .services .section-content .service-item {
-        height: 152px;
-        width: 152px;
-        max-width: 152px;
-        padding: 16px;
-    }
 }
 
 /* Small devices (phones, less than 600px) */
@@ -121,24 +103,68 @@
         margin-top: 32px;
     }
 
-    .services .section-heading {
-        margin-bottom: 32px;
-    }
-
-    .services .section-content {
-        align-items: center;
-    }
-
-    .services {
-        padding-bottom: 32px;
-    }
-
     .service-item {
-        height: 131px;
         width: 120px;
         max-width: 137px;
         font-size: 16px;
-        padding: 12px;
+        display: block;
+    }
+
+    /* Default grid layout */
+    #services .service-items {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #services .service-item {
+        position: relative;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    #services .service-item .service-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 6px 0px;
+    }
+
+    #services .service-item .service-label::after {
+        content: "▼";
+        /* Dropdown arrow symbol */
+        transition: transform 0.3s ease;
+    }
+
+    #services .service-item p {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+
+    #services .service-item.open .service-label::after {
+        transform: rotate(180deg);
+        /* Rotate arrow */
+    }
+
+    #services .service-item.open p {
+        max-height: 200px;
+        /* Adjust to fit your largest content */
+        opacity: 1;
+    }
+
+    /* Optional: Adding a smoother animation */
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .industry-items {
@@ -206,6 +232,40 @@
 
 /* Medium devices (tablets, 600px to 899px) */
 @media (min-width: 600px) and (max-width: 899px) {}
+
+/* Screens laptop to smaller */
+@media (max-width: 1024px) {
+    .service-items {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .services {
+        background-image: none;
+    }
+
+    .services .section-content {
+        background-image: url('../assets/images/servicesBackground.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        align-items: center;
+    }
+
+    .services .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .services {
+        padding-bottom: 32px;
+    }
+
+    .services .section-content .service-item {
+        width: 280px;
+        max-width: 280px;
+        padding: 16px;
+    }
+}
 
 /* Large devices (desktops, 900px and up) */
 @media (min-width: 900px) {}
