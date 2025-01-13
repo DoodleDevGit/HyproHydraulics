@@ -4,7 +4,7 @@
     /* Hidden by default */
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 30px;
     cursor: pointer;
     color: #ACC5DA;
 }
@@ -128,6 +128,10 @@
         align-items: center;
     }
 
+    .services {
+        padding-bottom: 32px;
+    }
+
     .service-item {
         height: 131px;
         width: 120px;
@@ -138,6 +142,12 @@
 
     .industry-items {
         padding-bottom: 0px;
+        gap: 16px;
+    }
+
+    .industry-item {
+        padding: 12px;
+        flex: 1 1 calc(50% - 10px);
     }
 
     .industry-item img {
@@ -163,14 +173,6 @@
 
     .carousel .indicators {
         display: block;
-    }
-
-    .industry-items {
-        gap: 16px;
-    }
-
-    .industry-item {
-        padding: 12px;
     }
 
     .about .section-heading {
