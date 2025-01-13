@@ -612,6 +612,11 @@ h1.hero-text {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
+}
+
+.contact-info img {
+    height: 28px;
 }
 
 .contact .contact-info a {
