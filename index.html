@@ -300,17 +300,14 @@
                 <img src="./assets/vectors/email.svg" alt="Email" />
                 <p>
                   Email:
-                  <a href="mailto:doodledev@outlook.com">INFO@HYPRO.CO.ZA</a>
+                  <a href="mailto:info@hypro.co.za">info@hypro.co.za</a>
                 </p>
               </div>
             </div>
 
             <div class="whatsapp-container">
               <a href="https://wa.me/0813952013" target="_blank">
-                <p>
-                  Or send us a message<br />
-                  directly via WhatsApp
-                </p>
+                <p>Click here to WhatsApp us</p>
                 <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
               /></a>
             </div>
@@ -383,8 +380,10 @@
     <script>
       $(document).ready(function () {
         $(".overlay, body").addClass("loaded");
+        $("body").css({ overflow: "hidden" });
         setTimeout(function () {
           $(".overlay").css({ display: "none" });
+          $("body").css({ overflow: "auto" });
         }, 1000);
       });
     </script>
