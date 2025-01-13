@@ -14,10 +14,6 @@
         padding: 16px 36px 16px 36px;
     }
 
-    .section {
-        height: 100vh;
-    }
-
     .logo a img {
         height: 42px;
     }
@@ -73,6 +69,8 @@
 
     .section {
         margin-bottom: 0px;
+        height: fit-content;
+        min-height: 100vh;
     }
 
     .right-contact-section {
@@ -87,11 +85,11 @@
     }
 
     .service-item {
-        height: 164px;
-        width: 137px;
+        height: 131px;
+        width: 120px;
         max-width: 137px;
         font-size: 16px;
-        padding: 20px;
+        padding: 12px;
     }
 
     section#about {
@@ -112,6 +110,44 @@
 
     .about .carousel .carousel-item {
         width: 90%;
+    }
+
+    .carousel .indicators {
+        display: block;
+    }
+
+    .industry-items {
+        gap: 16px;
+    }
+
+    .industry-item {
+        padding: 12px;
+    }
+
+    .about .section-heading {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .process {
+        padding-bottom: 32px;
+    }
+
+    .contact .section-content {
+        display: block;
+        padding: 0px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .footer-copy h1 {
+        margin: 0;
+        font-size: 9px;
+        color: #49637A;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
 
