@@ -15,9 +15,21 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
   </head>
+  <div class="overlay">
+    <div class="overlayDoor"></div>
+    <div class="overlayContent">
+      <div class="loader">
+        <div class="inner"></div>
+      </div>
+    </div>
+  </div>
   <body>
     <!-- Navigation -->
     <header class="header">
@@ -368,5 +380,13 @@
         </h1>
       </div>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $(".overlay, body").addClass("loaded");
+        setTimeout(function () {
+          $(".overlay").css({ display: "none" });
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
