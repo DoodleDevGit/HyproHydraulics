@@ -15,9 +15,21 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
   </head>
+  <div class="overlay">
+    <div class="overlayDoor"></div>
+    <div class="overlayContent">
+      <div class="loader">
+        <div class="inner"></div>
+      </div>
+    </div>
+  </div>
   <body>
     <!-- Navigation -->
     <header class="header">
@@ -288,17 +300,14 @@
                 <img src="./assets/vectors/email.svg" alt="Email" />
                 <p>
                   Email:
-                  <a href="mailto:doodledev@outlook.com">INFO@HYPRO.CO.ZA</a>
+                  <a href="mailto:info@hypro.co.za">info@hypro.co.za</a>
                 </p>
               </div>
             </div>
 
             <div class="whatsapp-container">
               <a href="https://wa.me/0813952013" target="_blank">
-                <p>
-                  Or send us a message<br />
-                  directly via WhatsApp
-                </p>
+                <p>Click here to WhatsApp us</p>
                 <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
               /></a>
             </div>
@@ -368,5 +377,15 @@
         </h1>
       </div>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $(".overlay, body").addClass("loaded");
+        $("body").css({ overflow: "hidden" });
+        setTimeout(function () {
+          $(".overlay").css({ display: "none" });
+          $("body").css({ overflow: "auto" });
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
