@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "flickity": "^3.0.0",
+    "flickity-bg-lazyload": "^2.0.0",
+    "swiper": "^11.2.0"
+  }
+}
