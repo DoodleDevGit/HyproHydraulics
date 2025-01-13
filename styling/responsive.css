@@ -1,0 +1,122 @@
+/* Responsive Media Queries */
+.burger-menu {
+    display: none;
+    /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ACC5DA;
+}
+
+@media (max-width: 768px) {
+    header.header {
+        padding: 16px 36px 16px 36px;
+    }
+
+    .section {
+        height: 100vh;
+    }
+
+    .logo a img {
+        height: 42px;
+    }
+
+    .burger-menu {
+        display: block;
+        /* Show burger menu on small screens */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        background: rgba(13, 13, 13, 0.97);
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        /* Prevent content overflow */
+        max-height: 0;
+        /* Start hidden */
+        transition: max-height 0.4s ease-in-out;
+        /* Smooth animation */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        /* Adjust this based on menu content height */
+    }
+}
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 599px) {
+    h2 {
+        font-size: 32px;
+    }
+
+    .content {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .section {
+        margin-bottom: 0px;
+    }
+
+    .right-contact-section {
+        grid-row: 2;
+        grid-column: 1;
+        padding: 0px 40px 30px 40px;
+    }
+
+    .services .section-content {
+
+        align-items: center;
+    }
+
+    .service-item {
+        height: 164px;
+        width: 137px;
+        max-width: 137px;
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    section#about {
+        height: fit-content;
+    }
+
+    .industry-items {
+        padding-bottom: 0px;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+
+    .control {
+        display: none;
+    }
+
+    .about .carousel .carousel-item {
+        width: 90%;
+    }
+}
+
+/* Medium devices (tablets, 600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {}
+
+/* Large devices (desktops, 900px and up) */
+@media (min-width: 900px) {}

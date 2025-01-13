@@ -10,11 +10,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styling/mainStyling.css" />
+    <link rel="stylesheet" href="./styling/responsive.css" />
     <script defer src="./scripts/mainScript.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -25,10 +27,13 @@
             <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
           </a>
         </div>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
+        <button class="burger-menu" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </header>
 
@@ -291,7 +296,7 @@
             <div class="whatsapp-container">
               <a href="https://wa.me/0813952013" target="_blank">
                 <p>
-                  Or send us a message<br />
+                  Or click here to<br />send us a message<br />
                   directly via WhatsApp
                 </p>
                 <img src="./assets/vectors/whatsapp.svg" alt="Whatsapp"
@@ -374,10 +379,6 @@
     </script>
 
     <!-- Load the EmailJS SDK -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
 
     <script type="text/javascript">
       window.onload = function () {

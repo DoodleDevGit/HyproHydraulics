@@ -30,6 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   sections.forEach((section) => observer.observe(section));
+  var burgerMenu = document.querySelector(".burger-menu");
+  var navLinks = document.querySelector(".nav-links");
+
+  // Toggle menu on burger menu click
+  burgerMenu.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent the click from propagating to the document
+    navLinks.classList.toggle("active");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!navLinks.contains(e.target) && !burgerMenu.contains(e.target)) {
+      navLinks.classList.remove("active");
+    }
+  });
+
+  // Close menu on scroll
+  window.addEventListener("scroll", () => {
+    navLinks.classList.remove("active");
+  });
 
   var elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {

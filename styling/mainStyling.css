@@ -63,7 +63,7 @@ section {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #0D0D0D;
+    background: rgba(13, 13, 13, 0.97);
     padding: 20px 70px 20px 100px;
     z-index: 1000;
 }
