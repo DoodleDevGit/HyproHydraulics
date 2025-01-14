@@ -42,7 +42,7 @@
         /* Prevent content overflow */
         max-height: 0;
         /* Start hidden */
-        transition: max-height 0.4s ease-in-out;
+        transition: all 0.4s ease;
         /* Smooth animation */
     }
 
@@ -59,6 +59,11 @@
     .nav-links.active {
         max-height: 500px;
         /* Adjust this based on menu content height */
+    }
+
+    #process .section-content .process-list-container li {
+        background-image: none;
+        padding: 0px;
     }
 }
 
@@ -84,11 +89,6 @@
 
     #contact .section-content {
         margin-top: 0px;
-    }
-
-    #process .section-content .process-list-container li {
-        background-image: none;
-        padding: 0px;
     }
 
     .contact .section-content .left-contact-section h3 {
