@@ -60,6 +60,11 @@
         max-height: 500px;
         /* Adjust this based on menu content height */
     }
+
+    #process .section-content .process-list-container li {
+        background-image: none;
+        padding: 0px;
+    }
 }
 
 /* Small devices (phones, less than 600px) */
@@ -84,11 +89,6 @@
 
     #contact .section-content {
         margin-top: 0px;
-    }
-
-    #process .section-content .process-list-container li {
-        background-image: none;
-        padding: 0px;
     }
 
     .contact .section-content .left-contact-section h3 {

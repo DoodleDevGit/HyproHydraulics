@@ -181,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     navLinks.classList.remove("active");
   });
-
   var elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {
     indicators: true,
@@ -189,58 +188,58 @@ document.addEventListener("DOMContentLoaded", () => {
     fullWidth: false,
   });
 
-  var startY = 0;
   var startX = 0;
+  var startY = 0;
+  var threshold = 30; // Lower threshold for more responsive swiping
 
   elems.forEach(function (carousel) {
-    // Prevent interaction that changes the slide
+    const instance = M.Carousel.getInstance(carousel);
+
+    // Prevent any tap or click interactions with the carousel
     carousel.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
     });
 
     carousel.addEventListener("touchstart", function (e) {
-      startY = e.touches[0].clientY;
       startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
     });
 
     carousel.addEventListener("touchmove", function (e) {
-      const moveY = e.touches[0].clientY - startY;
       const moveX = e.touches[0].clientX - startX;
+      const moveY = e.touches[0].clientY - startY;
 
-      // Check if the movement is mostly vertical
+      // Allow vertical scrolling if the movement is mostly vertical
       if (Math.abs(moveY) > Math.abs(moveX)) {
-        // Allow vertical scrolling
         e.stopPropagation();
-      } else {
-        // Prevent default behavior for horizontal swipes
-        e.preventDefault();
+        return;
       }
+
+      // Prevent default behavior for horizontal swipes
+      e.preventDefault();
     });
 
     carousel.addEventListener("touchend", function (e) {
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+
       e.preventDefault();
       e.stopPropagation();
-    });
-  });
 
-  var carouselItems = document.querySelectorAll(".carousel-item");
-
-  carouselItems.forEach(function (slide) {
-    // Prevent interaction that changes the slide
-    slide.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    });
-
-    slide.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    });
-
-    slide.addEventListener("touchend", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
+      // Only trigger swipe if horizontal movement exceeds the threshold and is larger than vertical movement
+      if (Math.abs(diffX) > threshold && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          // Swipe left, move to the next slide
+          instance.next();
+        } else {
+          // Swipe right, move to the previous slide
+          instance.prev();
+        }
+      }
     });
   });
 
