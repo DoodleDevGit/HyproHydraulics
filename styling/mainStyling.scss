@@ -16,7 +16,6 @@ $background-color_9: #075E54;
 
 html {
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 
 * {
@@ -31,7 +30,6 @@ body {
 	font-family: $font-family_1;
 	line-height: 1.6;
 	font-weight: 300;
-	overflow-x: hidden;
 }
 
 .overlay {
@@ -159,7 +157,6 @@ section {
 	gap: 20px;
 	padding: 0px 100px 0px 100px;
 	margin-bottom: 0px;
-	overflow-x: hidden;
 }
 
 .header {
