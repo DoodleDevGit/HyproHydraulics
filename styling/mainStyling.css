@@ -6,6 +6,19 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+p {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -o-user-select: text;
+  user-select: text;
 }
 
 body {
@@ -182,11 +195,15 @@ section {
   justify-content: center;
 }
 
+.hero-logo {
+  -webkit-tap-highlight-color: transparent;
+}
 .hero-logo img {
   width: 100%;
   max-width: 517px;
   height: auto;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1.hero-text {
