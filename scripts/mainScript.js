@@ -5,7 +5,7 @@ document.querySelectorAll(".navbar a").forEach((link) => {
 
     var target = document.querySelector(this.getAttribute("href"));
     var targetPosition = target.getBoundingClientRect().top + window.scrollY; // Calculate the position of the target
-    var offsetPosition = targetPosition - 100; // Adjust for the offset (95px down)
+    var offsetPosition = targetPosition - 170; // Adjust for the offset (95px down)
 
     window.scrollTo({
       top: offsetPosition,
@@ -24,6 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
       publicKey: "j40Q4apzRCqxeJtXQ",
     });
   })();
+
+  function resetContactInput() {
+    var form = document.getElementById("contact-form");
+    form.reset();
+  }
+
+  resetContactInput();
 
   // Check if the EmailJS SDK loaded correctly
   if (typeof emailjs !== "undefined") {
@@ -49,11 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Send email using EmailJS
         emailjs.send("Tgmailservice", "template_yi8aegh", formData).then(
           function (response) {
+            resetContactInput();
             console.log("SUCCESS!", response.status, response.text);
             submitButton.textContent = "Sent Successfully!";
             submitButton.disabled = true; // Disable button after submission
           },
           function (error) {
+            resetContactInput();
             console.error("FAILED...", error);
             submitButton.textContent = "Failed to Send. Try Again.";
             submitButton.disabled = false; // Re-enable button after failure

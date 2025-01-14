@@ -164,6 +164,8 @@ section {
 }
 .navbar .logo a {
   margin: 0px;
+  display: flex;
+  align-items: center;
 }
 .navbar a {
   color: #F9F9F9;
