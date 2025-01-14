@@ -161,25 +161,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call the function initially to set the focus on load
   updateFocusedStep();
 
-  var burgerMenu = document.querySelector(".burger-menu");
-  var navLinks = document.querySelector(".nav-links");
+  const burgerCheckbox = document.getElementById("checkbox");
+  const navLinks = document.querySelector(".nav-links");
 
-  // Toggle menu on burger menu click
-  burgerMenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // Prevent the click from propagating to the document
-    navLinks.classList.toggle("active");
+  if (!burgerCheckbox || !navLinks) {
+    console.error("Element not found in DOM.");
+    return;
+  }
+
+  // Close menu on scroll
+  window.addEventListener("scroll", () => {
+    burgerCheckbox.checked = false;
+    navLinks.classList.remove("active");
   });
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
-    if (!navLinks.contains(e.target) && !burgerMenu.contains(e.target)) {
+    if (
+      !navLinks.contains(e.target) &&
+      !burgerCheckbox.parentElement.contains(e.target)
+    ) {
+      burgerCheckbox.checked = false;
       navLinks.classList.remove("active");
     }
   });
 
-  // Close menu on scroll
-  window.addEventListener("scroll", () => {
-    navLinks.classList.remove("active");
+  // Toggle nav links active class based on checkbox state
+  burgerCheckbox.addEventListener("change", () => {
+    if (burgerCheckbox.checked) {
+      navLinks.classList.add("active");
+    } else {
+      navLinks.classList.remove("active");
+    }
   });
 
   var elems = document.querySelectorAll(".carousel");
