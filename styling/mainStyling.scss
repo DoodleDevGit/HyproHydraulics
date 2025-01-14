@@ -16,6 +16,7 @@ $background-color_9: #075E54;
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 * {
@@ -30,6 +31,7 @@ body {
 	font-family: $font-family_1;
 	line-height: 1.6;
 	font-weight: 300;
+	overflow-x: hidden;
 }
 
 .overlay {
@@ -173,6 +175,7 @@ section {
 	gap: 20px;
 	padding: 0px 100px 0px 100px;
 	margin-bottom: 0px;
+	overflow-x: hidden;
 }
 
 .header {
@@ -382,7 +385,7 @@ h1.hero-text {
 	transform-style: preserve-3d;
 	-webkit-transform-origin: 0% 50%;
 	transform-origin: 0% 50%;
-	user-select: none;
+	user-select: none !important;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	-webkit-tap-highlight-color: transparent;
@@ -394,7 +397,7 @@ h1.hero-text {
 
 		img {
 			width: 100%;
-			user-select: none;
+			user-select: none !important;
 		}
 
 		visibility: hidden;
@@ -494,7 +497,7 @@ h1.hero-text {
 }
 
 .carousel-item {
-	user-select: none;
+	user-select: none !important;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	-webkit-tap-highlight-color: transparent;
@@ -836,6 +839,7 @@ h1.hero-text {
 		padding: 10px 20px;
 		cursor: pointer;
 		transition: background-color 0.3s ease-in-out;
+		-webkit-tap-highlight-color: transparent;
 
 		&:active {
 			background-color: $background-color_5 !important;

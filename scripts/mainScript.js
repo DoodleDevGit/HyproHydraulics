@@ -235,10 +235,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (Math.abs(diffX) > threshold && Math.abs(diffX) > Math.abs(diffY)) {
         if (diffX < 0) {
           // Swipe left, move to the next slide
-          instance.next();
+          instance.next(1);
         } else {
           // Swipe right, move to the previous slide
-          instance.prev();
+          instance.prev(1);
         }
       }
     });
