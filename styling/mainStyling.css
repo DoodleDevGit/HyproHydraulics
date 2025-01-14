@@ -489,12 +489,9 @@ h1.hero-text {
 .process-list-container li {
   min-height: 117px;
   transition: all 0.2s ease;
-  /* &:hover {
-  	transform: scale(1.1);
-  } */
 }
 .process-list-container li.focused {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .process-list-container .left {
   display: inline-block;
