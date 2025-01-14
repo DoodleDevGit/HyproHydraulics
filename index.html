@@ -39,7 +39,14 @@
             <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
           </a>
         </div>
-        <button class="burger-menu" aria-label="Toggle navigation">☰</button>
+        <div class="burger-menu-container" aria-label="Toggle navigation">
+          <input type="checkbox" id="checkbox" class="burger-menu" />
+          <label for="checkbox" class="toggle">
+            <div class="bar bar--top"></div>
+            <div class="bar bar--middle"></div>
+            <div class="bar bar--bottom"></div>
+          </label>
+        </div>
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#about">About</a>
