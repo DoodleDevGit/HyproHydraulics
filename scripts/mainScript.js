@@ -181,6 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     navLinks.classList.remove("active");
   });
+
   var elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {
     indicators: true,
