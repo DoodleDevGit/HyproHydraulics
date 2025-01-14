@@ -80,6 +80,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach((section) => observer.observe(section));
 
+  const steps = document.querySelectorAll(".process-list-container li");
+  let userInteractedStep = false; // Flag to track user interaction (click or hover)
+
+  // Function to calculate and update the focused step based on scrolling
+  const updateFocusedStep = () => {
+    if (userInteractedStep) return; // Skip updating if the user clicked or hovered over a step
+
+    const viewportMiddle = window.innerHeight / 2;
+    let closestStep = null;
+    let closestDistance = Infinity;
+
+    steps.forEach((step) => {
+      const stepRect = step.getBoundingClientRect();
+      const stepMiddle = stepRect.top + stepRect.height / 2;
+      const distanceToMiddle = Math.abs(stepMiddle - viewportMiddle);
+
+      if (distanceToMiddle < closestDistance) {
+        closestDistance = distanceToMiddle;
+        closestStep = step;
+      }
+    });
+
+    // Remove the 'focused' class from all <li> elements
+    steps.forEach((step) => step.classList.remove("focused"));
+
+    // Add the 'focused' class to the closest step
+    if (closestStep) {
+      closestStep.classList.add("focused");
+    }
+  };
+
+  // Function to handle hovering over a step
+  const handleHover = (event) => {
+    userInteractedStep = true; // Set the flag to prevent scroll updates
+    const hoveredStep = event.currentTarget;
+
+    // Remove the 'focused' class from all <li> elements
+    steps.forEach((step) => step.classList.remove("focused"));
+
+    // Add the 'focused' class to the hovered step
+    hoveredStep.classList.add("focused");
+  };
+
+  // Function to handle clicking on a step
+  const handleClick = (event) => {
+    userInteractedStep = true; // Set the flag to prevent scroll updates
+    const clickedStep = event.currentTarget;
+
+    // Remove the 'focused' class from all <li> elements
+    steps.forEach((step) => step.classList.remove("focused"));
+
+    // Add the 'focused' class to the clicked step
+    clickedStep.classList.add("focused");
+
+    // Scroll event will resume focus effect after 1 second
+    setTimeout(() => {
+      userInteractedStep = false; // Allow scroll updates again
+    }, 1000);
+  };
+
+  // Function to handle mouse leaving a step
+  const handleMouseLeave = () => {
+    // Allow scrolling focus effect again after leaving a step
+    setTimeout(() => {
+      userInteractedStep = false;
+    }, 100);
+  };
+
+  // Add hover and click event listeners to each step
+  steps.forEach((step) => {
+    step.addEventListener("mouseover", handleHover);
+    step.addEventListener("mouseleave", handleMouseLeave);
+    step.addEventListener("click", handleClick);
+  });
+
+  // Add a scroll event listener
+  window.addEventListener("scroll", updateFocusedStep);
+
+  // Call the function initially to set the focus on load
+  updateFocusedStep();
+
   var burgerMenu = document.querySelector(".burger-menu");
   var navLinks = document.querySelector(".nav-links");
 
