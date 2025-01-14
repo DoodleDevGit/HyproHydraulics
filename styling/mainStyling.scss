@@ -11,8 +11,8 @@ $background-color_4: rgba(46, 71, 92);
 $background-color_5: #172A3A;
 $background-color_6: #49637A;
 $background-color_7: transparent;
-$background-color_8: #0056b3;
-$background-color_9: #28a745;
+$background-color_8: #49637A;
+$background-color_9: #075E54;
 
 html {
 	scroll-behavior: smooth;
@@ -837,8 +837,12 @@ h1.hero-text {
 		cursor: pointer;
 		transition: background-color 0.3s ease-in-out;
 
+		&:active {
+			background-color: $background-color_5 !important;
+		}
+
 		&:hover {
-			background-color: $background-color_8;
+			background-color: $background-color_5;
 		}
 
 		&:disabled {
