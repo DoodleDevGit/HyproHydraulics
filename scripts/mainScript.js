@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send email using EmailJS
-        emailjs.send("Tgmailservice", "template_yi8aegh", formData).then(
+        emailjs.send("doodleEmailService", "template_yi8aegh", formData).then(
           function (response) {
             resetContactInput();
             console.log("SUCCESS!", response.status, response.text);
