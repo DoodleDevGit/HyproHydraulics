@@ -769,6 +769,15 @@ h1.hero-text {
   margin: 10px 0;
 }
 
+.numbers {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.numbers p {
+  margin: 0px;
+}
+
 .contact-info {
   display: flex;
   flex-direction: row;
