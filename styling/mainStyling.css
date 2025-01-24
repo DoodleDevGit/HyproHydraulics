@@ -618,7 +618,11 @@ h1.hero-text {
   gap: 20px;
 }
 .contact .section-heading {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 12px;
 }
 .contact .section-content {
   display: grid;
