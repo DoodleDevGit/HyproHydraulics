@@ -616,6 +616,7 @@ h1.hero-text {
 
 .contact {
   gap: 20px;
+  margin-bottom: 60px !important;
 }
 .contact .section-heading {
   display: flex;
@@ -758,6 +759,7 @@ h1.hero-text {
 }
 
 .right-contact-section {
+  height: fit-content;
   grid-row: 1;
   grid-column: 2;
   background-color: #49637A;
