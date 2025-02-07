@@ -844,6 +844,7 @@ footer {
 }
 
 .footer-social-links {
+  display: none !important;
   flex: 1;
   display: flex;
   justify-content: center;
