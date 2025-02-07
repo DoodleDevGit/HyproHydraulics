@@ -239,7 +239,7 @@ h1.hero-text {
   width: 100%;
   justify-content: center;
   height: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .service-items {
