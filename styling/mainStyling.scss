@@ -16,7 +16,7 @@ $background-color_9: #075E54;
 
 .maintenance {
 	text-align: center;
-	height: 100vh;
+	height: 100%;
 	gap: 50px;
 	display: grid;
 	align-items: center;
@@ -25,6 +25,7 @@ $background-color_9: #075E54;
 	justify-content: center;
 	transform: translateY(50px);
 	background-color: #2D363F;
+	padding: 20px;
 
 	img {
 		width: 85%;
