@@ -14,6 +14,27 @@ $background-color_7: transparent;
 $background-color_8: #49637A;
 $background-color_9: #075E54;
 
+.maintenance {
+	text-align: center;
+	height: 100vh;
+	gap: 50px;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+	justify-content: center;
+	transform: translateY(50px);
+	background-color: #2D363F;
+
+	img {
+		width: 85%;
+		max-width: 517px;
+		height: auto;
+		position: relative;
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -38,7 +59,8 @@ p {
 }
 
 body {
-	background: #0D0D0D;
+	//background: #0D0D0D; maintenance remove background-color: #2D363F;
+	background-color: #2D363F;
 	color: $color_1;
 	font-family: $font-family_1;
 	line-height: 1.6;
@@ -157,6 +179,10 @@ section {
 	transform: translateY(50px);
 	transition: opacity 0.6s ease, transform 0.6s ease;
 	margin-bottom: 150px;
+}
+
+img {
+	-webkit-tap-highlight-color: transparent;
 }
 
 .section.visible {
