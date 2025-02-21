@@ -30,9 +30,28 @@
       </div>
     </div>
   </div>
-  <body>
+  <body style="overflow: hidden">
+    <!-- maintenance remove overflow: hidden -->
+    <div class="maintenance">
+      <img
+        src="./assets/logo/heroLogo.png"
+        srcset="
+          ./assets/logo/heroLogo.png    1x,
+          ./assets/logo/heroLogo@2x.png 2x,
+          ./assets/logo/heroLogo@3x.png 3x
+        "
+        alt="Logo"
+        loading="lazy"
+      />
+      <img
+        class="contruction-image"
+        src="./assets/images/maintenance/maintenance.jpg"
+        alt="Under Construction"
+      />
+    </div>
     <!-- Navigation -->
-    <header class="header">
+    <header class="header" style="display: none">
+      <!-- maintenance remove display: none -->
       <nav class="navbar">
         <div class="logo">
           <a href="#hero">
@@ -56,7 +75,8 @@
       </nav>
     </header>
 
-    <div class="content">
+    <div class="content" style="display: none">
+      <!-- maintenance remove display: none -->
       <!-- Hero Section -->
       <section id="hero" class="hero section">
         <div class="hero-logo">
@@ -388,7 +408,8 @@
       </section>
     </div>
 
-    <footer>
+    <footer style="display: none">
+      <!-- maintenance remove display: none -->
       <div class="footer-logo">
         <a href="#hero">
           <img src="./assets/logo/navbarLogo.svg" alt="Logo" />
@@ -411,7 +432,7 @@
         $("body").css({ overflow: "hidden" });
         setTimeout(function () {
           $(".overlay").css({ display: "none" });
-          $("body").css({ overflow: "auto" });
+          $("body").css({ overflow: "hidden" }); // maintenance overflow: auto
         }, 1000);
       });
     </script>
